@@ -12,7 +12,7 @@ DEBUGMODE = True
 #-----------------------------Global VARS-------------------------
 #-----------------------------Logging-----------------------------
 
-def loggingSetup():
+def loggingSetup(): #Setup needed logging settings
     if DEBUGMODE:
         logging.basicConfig(level=logging.DEBUG, filename="log.log", filemode="a", format='%(asctime)s :: %(name)s :: %(levelname)-8s :: %(message)s')
         logging.critical("\n\n\nNew session, DEBUG=ON")
@@ -31,29 +31,31 @@ def loggingSetup():
 #-----------------------------Main--------------------------------
 
 def main():
-    Running = True
-    Usedconfig = loadConfig("Cessna152")
-    CReadD, CWriteD, keymapping = fetchFromConfig(Usedconfig)
-    ReadD = deepcopy(CReadD)
+    Usedconfig = loadConfig("Cessna152") #Fetches config file from the correct directory. Add the planename as a string as a argument to get the correct one
+    CReadD, CWriteD, keymapping = fetchFromConfig(Usedconfig) #Currently a placeholder: Fetch needed data from the file givven bij loadConfig()
+    ReadD = deepcopy(CReadD) #Create a exact non-dependent copy to keep the original in tact when editing this one
 
-    listener = keyboard.Listener(on_press=onkeypress)
-    listener.start()
-    listener.join()
+    listener = keyboard.Listener(on_press=onkeypress) #Setup listener to execute onkeypress() when a keyboard key is pressed
+    listener.start() #Start listner
+    listener.join() #Remove if main thread is polling self.keys
 
 
 
 def onkeypress(Key):
     temp = {"9" : ["E", 1.0, "PARKING_BRAKES"],
-                  "8" : ["E", 0.0, "PARKING_BRAKES"]}
+            "8" : ["E", 0.0, "PARKING_BRAKES"]} #A copy of the testversion of keymapping
     
-    print(Key)
-    print(type(Key))
-    if hasattr(Key, "char"):
-        if Key.char == "\x03":
+    print(Key)                                  #Print checks
+    print(type(Key))                            #Print checks
+    if hasattr(Key, "char"):                    #Prevent crash if key has no char element like in BACKSPACE
+        if Key.char == "\x03":                  #ctrl-C to close escape if needed
             exit()
-        if Key.char in temp:
+        if Key.char in temp:                    #Check to see if key in temp
             print("Ping!")
-            print(temp.get(Key.char))
+            print(temp.get(Key.char))           #Fetch key value
+    
+
+
         
 
     #Init loop for reading and writing
@@ -65,9 +67,9 @@ def onkeypress(Key):
 #-----------------------------ConfigStuff-------------------------
 
 def loadConfig(Name):
-    with open("PlanesConfigs\{}\{}_Panel.cfg".format(Name, Name), encoding = 'utf-8') as file:
-        config = file.read()
-    return config
+    with open("PlanesConfigs\{}\{}_Panel.cfg".format(Name, Name), encoding = 'utf-8') as file: #Open file from directory according to the given input
+        config = file.read() #Load file to var
+    return config #Return var to main thread
 
 def fetchFromConfig(config):
     #Faking this to test the rest of the parts
@@ -98,7 +100,7 @@ def fetchFromConfig(config):
                 701 : "PITOT_HEAT" #Request Pitot heat switch state (Bool: 0.0 or 1.0)
                 }
 
-    #Array works as follows:
+    #!Array in WriteData works as follows:
     #["W"/"E", [type, lowerrange, upperrange], "EventOrRequestName"]
     #   "W"/"E" = Tells if you need to write data to the game ("W"), or toggle an event ("E") to get what you want
     #   [type, lowerrange, upperrange] = the type of accepted info followed by the upper and lower limit ("f" = float, "b" = bool)
@@ -139,13 +141,13 @@ def fetchFromConfig(config):
                 }
     
     keymapping = {9 : ["E", 1.0, "PARKING_BRAKES"],
-                  8 : ["E", 0.0, "PARKING_BRAKES"]}
+                  8 : ["E", 0.0, "PARKING_BRAKES"]} #Keymapping to test the current parts. If key 'x' is pressed, then toggle [a, b, c]
 
-    return ReadData, WriteData, keymapping
+    return ReadData, WriteData, keymapping #return three needed peaces of info
 
 #----------------------------ConfigStuff--------------------------
 #-----------------------------__name__----------------------------
 
-if __name__ == "__main__":
+if __name__ == "__main__": #Self explanatory
     loggingSetup()
     main()
