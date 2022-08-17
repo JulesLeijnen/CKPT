@@ -24,7 +24,6 @@ def loggingSetup(): #Setup needed logging settings
         logging.critical("\n\n\nNew session, DEBUG=ERROR")
         logging.warning("Logging not correctly initiated via DEBUGMODE variable... Somehow?")
         logging.warning("Restoring default level=DEBUG config")
-        #TODO RAISE
     return
 
 #-----------------------------Logging-----------------------------
@@ -99,6 +98,7 @@ def fetchFromConfig(config):
                 
                 701 : "PITOT_HEAT" #Request Pitot heat switch state (Bool: 0.0 or 1.0)
                 }
+
 
     #!Array in WriteData works as follows:
     #["W"/"E", [type, lowerrange, upperrange], "EventOrRequestName"]
