@@ -32,7 +32,7 @@ def main():
     global sm, aq, ae
     #Give all the variables that you want in a list like this:
     #["PLANE_ALTITUDE", "ENGINE_CONTROL_SELECT", "RADIO_HEIGHT", "PARTIAL_PANEL_ADF", "HSI_SPEED", "HSI_DISTANCE"]
-    input = ["FLAP_POSITION_SET"]
+    input = ["MAGNETO_LEFT"]
 
     #Use the SimConnect() to connect to the the game
     sm = SimConnect()

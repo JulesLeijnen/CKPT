@@ -33,7 +33,7 @@ def main():
     global sm, aq, ae
     #Give all the variables that you want in a list like this:
     #["PARKING_BRAKES"]
-    input = ["FLAPS_SET"]
+    input = ["MAGNETO_RIGHT"]
 
     #Use the SimConnect() to connect to the the game
     sm = SimConnect()
