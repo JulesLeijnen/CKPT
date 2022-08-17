@@ -2,6 +2,8 @@ from SimConnect import *
 from SimConnect.Enum import *
 import logging
 from time import sleep
+from copy import deepcopy
+from pynput import keyboard
 #-----------------------------Imports-----------------------------
 #-----------------------------Global VARS-------------------------
 
@@ -29,8 +31,31 @@ def loggingSetup():
 #-----------------------------Main--------------------------------
 
 def main():
+    Running = True
     Usedconfig = loadConfig("Cessna152")
-    DB = fetchFromConfig(Usedconfig)
+    CReadD, CWriteD, keymapping = fetchFromConfig(Usedconfig)
+    ReadD = deepcopy(CReadD)
+
+    listener = keyboard.Listener(on_press=onkeypress)
+    listener.start()
+    listener.join()
+
+
+
+def onkeypress(Key):
+    temp = {"9" : ["E", 1.0, "PARKING_BRAKES"],
+                  "8" : ["E", 0.0, "PARKING_BRAKES"]}
+    
+    print(Key)
+    print(type(Key))
+    if hasattr(Key, "char"):
+        if Key.char == "\x03":
+            exit()
+        if Key.char in temp:
+            print("Ping!")
+            print(temp.get(Key.char))
+        
+
     #Init loop for reading and writing
         #Read from game to DB.
         #Check for Inputs
@@ -112,7 +137,11 @@ def fetchFromConfig(config):
                 
                  701 : ["E", None, "PITOT_HEAT_TOGGLE"]
                 }
-    return ReadData, WriteData
+    
+    keymapping = {9 : ["E", 1.0, "PARKING_BRAKES"],
+                  8 : ["E", 0.0, "PARKING_BRAKES"]}
+
+    return ReadData, WriteData, keymapping
 
 #----------------------------ConfigStuff--------------------------
 #-----------------------------__name__----------------------------
