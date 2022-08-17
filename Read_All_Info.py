@@ -41,14 +41,13 @@ def main():
     aq = AircraftRequests(sm)
     ae = AircraftEvents(sm)
 
-    readInfo(input)
+    readInfo(input, sm, aq)
     return
 
 #-----------------------------Main--------------------------------
 #-----------------------------readInfo-----------------------------
 
-def readInfo(input):
-    global sm, aq
+def readInfo(input, sm, aq):
 
     #Make empty list and replace all the keywords with the locations to use the .get() on
     locations = []

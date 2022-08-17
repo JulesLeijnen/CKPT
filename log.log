@@ -109,3 +109,236 @@ New session, DEBUG=ON
 
 
 New session, DEBUG=ON
+2022-08-17 16:38:39,727 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:39:32,577 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:39:47,260 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:40:24,815 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:52:03,504 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:52:03,955 :: SimConnect.SimConnect :: DEBUG    :: Did not find Flight Simulator running.
+2022-08-17 16:53:34,603 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:53:35,047 :: SimConnect.SimConnect :: DEBUG    :: Did not find Flight Simulator running.
+2022-08-17 16:58:16,146 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:58:16,152 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 16:58:16,173 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 16:58:37,205 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:58:37,213 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 16:58:37,235 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 16:59:37,122 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 16:59:37,129 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 16:59:37,160 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:00:12,954 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 17:00:12,959 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 17:00:12,981 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:00:36,811 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 17:00:36,816 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 17:00:36,847 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:01:16,643 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 17:01:16,651 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 17:01:16,666 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:01:54,233 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 17:01:54,239 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 17:01:54,257 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:02:36,904 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 17:02:36,912 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 17:02:36,934 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:05:15,980 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 17:05:15,986 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 17:05:16,008 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:05:35,123 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 17:05:35,128 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 17:05:35,153 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:05:56,588 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 17:05:56,594 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 17:05:56,610 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 17:08:20,036 :: SimConnect.SimConnect :: INFO     :: SIM Stop
+2022-08-17 18:02:35,837 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:02:36,283 :: SimConnect.SimConnect :: DEBUG    :: Did not find Flight Simulator running.
+2022-08-17 18:03:42,551 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:03:42,958 :: SimConnect.SimConnect :: DEBUG    :: Did not find Flight Simulator running.
+2022-08-17 18:05:22,490 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:05:22,495 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:05:22,555 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:05:30,383 :: SimConnect.SimConnect :: INFO     :: SIM START
+2022-08-17 18:08:12,261 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:08:12,269 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:08:12,276 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:08:20,330 :: pynput.keyboard.Listener :: ERROR    :: Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\_util\__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\keyboard\_win32.py", line 287, in _process
+    self.on_press(key)
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\_util\__init__.py", line 144, in inner
+    if f(*args) is False:
+  File "d:\Coding\CKPT\main.py", line 101, in onkeypress
+    ae.find(CWriteD.get(command[2]))()
+TypeError: 'NoneType' object is not callable
+2022-08-17 18:09:05,721 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:09:05,730 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:09:05,761 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:09:53,165 :: pynput.keyboard.Listener :: ERROR    :: Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\_util\__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\keyboard\_win32.py", line 287, in _process
+    self.on_press(key)
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\_util\__init__.py", line 144, in inner
+    if f(*args) is False:
+  File "d:\Coding\CKPT\main.py", line 101, in onkeypress
+    ae.find(CWriteD.get(command[2]))()
+TypeError: 'NoneType' object is not callable
+2022-08-17 18:10:27,940 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:10:27,948 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:10:27,986 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:11:56,880 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:11:56,891 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:11:56,935 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:12:49,561 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:12:49,568 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:12:49,611 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:13:57,829 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:13:57,836 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:13:57,874 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:14:03,310 :: pynput.keyboard.Listener :: ERROR    :: Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\_util\__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\keyboard\_win32.py", line 287, in _process
+    self.on_press(key)
+  File "C:\Users\Jules\AppData\Roaming\Python\Python310\site-packages\pynput\_util\__init__.py", line 144, in inner
+    if f(*args) is False:
+  File "d:\Coding\CKPT\main.py", line 101, in onkeypress
+    temp2 = CWriteD.get(command[2][2])
+TypeError: 'int' object is not subscriptable
+2022-08-17 18:16:12,479 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:16:12,486 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:16:12,535 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:16:31,559 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:16:31,568 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:16:31,605 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:17:04,281 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:17:04,289 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:17:04,325 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:17:36,100 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:17:36,109 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:17:36,125 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:23:37,410 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:23:37,416 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:23:37,446 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:24:47,206 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:24:47,214 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:24:47,248 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:25:42,337 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:25:42,345 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:25:42,362 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:26:20,882 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:26:20,887 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:26:20,921 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-17 18:27:03,305 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-17 18:27:03,312 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-17 18:27:03,337 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
