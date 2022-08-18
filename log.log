@@ -342,3 +342,56 @@ New session, DEBUG=ON
 New session, DEBUG=ON
 2022-08-17 18:27:03,312 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
 2022-08-17 18:27:03,337 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-18 16:31:04,242 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:31:04,694 :: SimConnect.SimConnect :: DEBUG    :: Did not find Flight Simulator running.
+2022-08-18 16:39:17,273 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:39:17,279 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-18 16:39:17,301 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-18 16:40:54,337 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:40:54,343 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-18 16:40:54,375 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-18 16:41:09,873 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:41:09,879 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-18 16:41:09,910 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-18 16:41:18,340 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:41:18,347 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-18 16:41:18,363 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-18 16:44:44,550 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:44:44,557 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-18 16:44:44,580 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-18 16:45:05,914 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:45:05,920 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-18 16:45:05,936 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-18 16:47:04,363 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:47:04,370 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-18 16:47:04,407 :: SimConnect.SimConnect :: INFO     :: SIM OPEN
+2022-08-18 16:49:29,492 :: root :: CRITICAL :: 
+
+
+New session, DEBUG=ON
+2022-08-18 16:49:29,498 :: SimConnect.SimConnect :: DEBUG    :: Connected to Flight Simulator!
+2022-08-18 16:49:29,513 :: SimConnect.SimConnect :: INFO     :: SIM OPEN

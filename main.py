@@ -35,85 +35,59 @@ def main():
     global sm, aq, ae, ReadD,CWriteD
     Running = True
 
-    sm = SimConnect() #Connect to the local Simconnect server
-    aq = AircraftRequests(sm) #Make an AircraftRequests instance
-    ae = AircraftEvents(sm) #Make an AircraftEvents instance
+    sm = SimConnect()                                               #Connect to the local Simconnect server
+    aq = AircraftRequests(sm)                                       #Make an AircraftRequests instance
+    ae = AircraftEvents(sm)                                         #Make an AircraftEvents instance
 
-    Usedconfig = loadConfig("Cessna152") #Fetches config file from the correct directory. Add the planename as a string as a argument to get the correct one
-    CReadD, CWriteD, keymapping = fetchFromConfig(Usedconfig) #Currently a placeholder: Fetch needed data from the file givven bij loadConfig()
-    ReadD = deepcopy(CReadD) #Create a exact non-dependent copy to keep the original in tact when editing this one
+    Usedconfig = loadConfig("Cessna152")                            #Fetches config file from the correct directory. Add the planename as a string as a argument to get the correct one
+    CReadD, CWriteD, keymapping = fetchFromConfig(Usedconfig)       #Currently a placeholder: Fetch needed data from the file givven bij loadConfig()
+    ReadD = deepcopy(CReadD)                                        #Create a exact non-dependent copy to keep the original in tact when editing this one
 
-    listener = keyboard.Listener(on_press=onkeypress) #Setup listener to execute onkeypress() when a keyboard key is pressed
-    listener.start() #Start listner
+    listener = keyboard.Listener(on_press=onkeypress)               #Setup listener to execute onkeypress() when a keyboard key is pressed
+    listener.start()                                                #Start listner
 
-    while Running:
-        ReadD = reReadGame(CReadD, aq)
-        print(listener.is_alive())
-        sleep(3)
-        pass
+    while Running:                                                  #Infinite loop to keep program running
+        ReadD = reReadGame(CReadD, aq)                              #Update read vars from game
+        print(listener.is_alive())                                  #TEMP
+        sleep(3)                                                    #TEMP
 
-def reReadGame(Reads, aq):
-    preOutput = []
-    print("\n\n\n\n\n")
-    for key,value in Reads.items():
-        preOutput.append([key, aq.find(value).get()])
-        print(value + ": " + str(aq.find(value).get()))
-    print(preOutput)
-    output = {preOutput[0][0] : preOutput[0][1],
-              preOutput[1][0] : preOutput[1][1],
-              preOutput[2][0] : preOutput[2][1],
-              preOutput[3][0] : preOutput[3][1],
-              preOutput[4][0] : preOutput[4][1],
-              preOutput[5][0] : preOutput[5][1],
-              preOutput[6][0] : preOutput[6][1],
-              preOutput[7][0] : preOutput[7][1],
-              preOutput[8][0] : preOutput[8][1],
-              preOutput[9][0] : preOutput[9][1],
-              preOutput[10][0] : preOutput[10][1],
-              preOutput[11][0] : preOutput[11][1],
-              preOutput[12][0] : preOutput[12][1],
-              preOutput[13][0] : preOutput[13][1],
-              preOutput[14][0] : preOutput[14][1],
-              preOutput[15][0] : preOutput[15][1],
-              preOutput[16][0] : preOutput[16][1],
-              preOutput[17][0] : preOutput[17][1],
-              preOutput[18][0] : preOutput[18][1],
-             }
-    print(output)
-    return output
+def reReadGame(Reads, aq):                                          #Function is to update the looked at variables ingame
+    output = {}                                                     #Creates empty output dict
+    print("\n\n\n\n\n")                                             #TEMP
+    for key,value in Reads.items():                                 #Loops through items of current vars
+        output[key] = aq.find(value).get()                          #Add to new dict with updated info
+        print(value + ": " + str(output[key]))                      #TEMP
+    print(output)                                                   #TEMP
+    return output                                                   #Returns updated dict to main function
 
 def onkeypress(Key):
     global sm, aq, ae, ReadD, CWriteD
     temp = {"9" : ["E", 1.0, 202],
-            "8" : ["E", 0.0, 202]} #A copy of the testversion of keymapping
+            "8" : ["E", 0.0, 202]}                                  #A copy of the testversion of keymapping
 
-    print(Key)                                  #Print checks
-    print(type(Key))                            #Print checks
-    if hasattr(Key, "char"):                    #Prevent crash if key has no char element like in BACKSPACE
-        if Key.char == "\x03":                  #ctrl-C to close escape if needed
+    print(Key)                                                      #TEMP
+    print(type(Key))                                                #TEMP
+    if hasattr(Key, "char"):                                        #Prevent crash if key has no char element like in BACKSPACE
+        if Key.char == "\x03":                                      #ctrl-C to close escape if needed
             exit()
-        if Key.char in temp:                    #Check to see if key in temp
+        if Key.char in temp:                                        #Check to see if key in temp
             command = temp.get(Key.char)
-            print(command)
+            print(command)                                          #TEMP
             if command[0] == "E":
                 Simvar = ReadD.get(command[2])
-                print(Simvar)
-                print(type(Simvar))
-                print(command[1])
-                print(type(command[1]))
-                Togglevar = CWriteD.get(command[2])
-                print(Togglevar)
-                if Simvar == command[1]:
+                print(Simvar)                                       #TEMP
+                print(type(Simvar))                                 #TEMP
+                print(command[1])                                   #TEMP
+                print(type(command[1]))                             #TEMP
+                Togglevar = CWriteD.get(command[2])                 #Get the current value of the var that is given
+                print(Togglevar)                                    #TEMP
+                if Simvar == command[1]:                            #Check if input var is already the same as current var
                     pass
                 else:
-                    temp2 = Togglevar[2]
-                    print(temp2)
-                    ae.find(temp2)()
+                    ae.find(Togglevar[2])()                         #Toggle event tied to pressed key
             
-            
-            
-            print("Ping!")
-            print(temp.get(Key.char))           #Fetch key value
+            print("Ping!")                                          #TEMP
+            print(temp.get(Key.char))                               #TEMP
     
 
 
