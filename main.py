@@ -184,6 +184,6 @@ def fetchFromConfig(config):
 #----------------------------ConfigStuff--------------------------
 #-----------------------------__name__----------------------------
 
-if __name__ == "__main__": #Self explanatory
+if __name__ == "__main__": #If you don't know what this is for: https://www.freecodecamp.org/news/if-name-main-python-example/#:~:text=We%20can%20use%20an%20if,name%20if%20it%20is%20imported.
     loggingSetup()
     main()
